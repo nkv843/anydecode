@@ -1,0 +1,1 @@
+export { QrTools } from './QrTools';

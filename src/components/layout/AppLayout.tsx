@@ -1,6 +1,6 @@
 import { type FC, type ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router';
-import { Binary, KeyRound, Menu } from 'lucide-react';
+import { Binary, KeyRound, Menu, QrCode } from 'lucide-react';
 import { cn } from '@app/lib/utils';
 import { Card } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@app
 const navItems = [
   { path: '/base64', label: 'Base64', icon: Binary },
   { path: '/jwt', label: 'JWT', icon: KeyRound },
+  { path: '/qr', label: 'QR Code', icon: QrCode },
 ] as const;
 
 type AppLayoutProps = {

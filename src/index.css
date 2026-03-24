@@ -23,6 +23,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* QR code styling */
+  --qr-fg: #000000;
+  --qr-bg: #ffffff;
+  --qr-rx: 0;
+
   /* Neutral zinc palette */
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
