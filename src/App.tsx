@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 import { AppLayout } from '@app/components/layout';
 import { Base64Tools } from '@app/features/base64';
+import { JsonSchemaTools } from '@app/features/json-schema';
 import { JwtTools } from '@app/features/jwt';
 import { QrTools } from '@app/features/qr';
 
@@ -17,6 +18,7 @@ export default () => (
               <Route path="base64" element={<Base64Tools />} />
               <Route path="jwt" element={<JwtTools />} />
               <Route path="qr" element={<QrTools />} />
+              <Route path="json-schema" element={<JsonSchemaTools />} />
             </Routes>
           </AppLayout>
         }

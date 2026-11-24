@@ -1,6 +1,6 @@
 import { type FC, type ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router';
-import { Binary, KeyRound, Menu, QrCode } from 'lucide-react';
+import { Binary, Braces, KeyRound, Menu, QrCode } from 'lucide-react';
 import { cn } from '@app/lib/utils';
 import { Card } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
@@ -10,6 +10,7 @@ const navItems = [
   { path: '/base64', label: 'Base64', icon: Binary },
   { path: '/jwt', label: 'JWT', icon: KeyRound },
   { path: '/qr', label: 'QR Code', icon: QrCode },
+  { path: '/json-schema', label: 'JSON schema', icon: Braces },
 ] as const;
 
 type AppLayoutProps = {
@@ -24,13 +25,13 @@ const NavLinks: FC<{ pathname: string; onNavigate?: () => void }> = ({ pathname,
         to={path}
         onClick={onNavigate}
         className={cn(
-          'flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors',
+          'flex items-center gap-2.5 rounded-md px-3 py-2 text-sm leading-snug transition-colors',
           pathname.startsWith(path)
             ? 'bg-accent font-medium text-foreground'
             : 'text-muted-foreground hover:bg-accent/50 hover:text-foreground'
         )}
       >
-        <Icon className="size-4" />
+        <Icon className="size-4 shrink-0" />
         {label}
       </NavLink>
     ))}
